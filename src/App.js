@@ -1,21 +1,13 @@
-import {Routes, Route, Outlet} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Home from "./routes/home/home"
+import NavBar from "./components/NavBar/NavBar"
 
-const Navigation = () => {
-  return (
-    <div>
-      <div>
-        <h1>NavBar</h1>
-      </div>
-      <Outlet />
-    </div>
-  )
-}
+
 
 const App = () => {
   return (
   <Routes>
-    <Route path="/" element={<Navigation />}>
+    <Route path="/" element={<NavBar />}>
       <Route index element={  <Home />} />
     </Route>
    
